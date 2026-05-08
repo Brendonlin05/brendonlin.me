@@ -28,12 +28,15 @@ import humanWard        from './pages/projects/content/HumanWard';
 import wolfWolf         from './pages/projects/content/WolfWolf';
 
 function App() {
-  const navRef = useRef(null);
   const [navH, setNavH] = useState(70);
   useEffect(() => {
     const el = document.querySelector('.nav');
     if (!el) return;
-    const ro = new ResizeObserver(([e]) => setNavH(Math.ceil(e.contentRect.height)));
+    const ro = new ResizeObserver(([e]) => {
+      const h = Math.ceil(e.target.offsetHeight);
+      setNavH(h);
+      document.documentElement.style.setProperty('--nav-h', h + 'px');
+    });
     ro.observe(el);
     return () => ro.disconnect();
   }, []);

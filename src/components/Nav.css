@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr auto;
   align-items: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
   padding: 25px 25px;
   box-sizing: border-box;
 }
@@ -125,13 +125,12 @@
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: var(--nav-h, 70px);
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.92);
     padding: 0 20px 16px;
   }
 
@@ -144,7 +143,7 @@
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     color: #989898;
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .nav-links a:last-child {
