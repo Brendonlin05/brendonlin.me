@@ -1,3 +1,11 @@
+.nav-frost {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
 .nav {
   position: fixed;
   top: 0;
