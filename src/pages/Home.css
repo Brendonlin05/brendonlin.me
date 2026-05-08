@@ -214,7 +214,7 @@
     max-width: 100%;
     width: 100%;
     padding: 0 var(--px-mobile);
-    font-size: 28px;
+    font-size: 18px;
   }
 
   .hero-sidebar {
@@ -233,7 +233,7 @@
   .hero-video-caption { font-size: 12px; }
 
   /* type */
-  .work-card-category { font-size: 14px; }
-  .work-card-title    { font-size: 28px; }
-  .work-card-desc     { font-size: 16px; }
+  .work-card-category { font-size: 11px; }
+  .work-card-title    { font-size: 18px; }
+  .work-card-desc     { font-size: 13px; }
 }

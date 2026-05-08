@@ -1,11 +1,3 @@
-.nav-frost {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
 .nav {
   position: fixed;
   top: 0;
@@ -137,8 +129,6 @@
     top: 100%;
     left: 0;
     right: 0;
-    flex-direction: column;
-    gap: 0;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -146,15 +136,15 @@
   }
 
   .nav-links.open {
-    display: flex;
+    display: block;
   }
 
   .nav-links a {
     display: block;
-    width: 100%;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     color: #989898;
+    font-size: 16px;
   }
 
   .nav-links a:last-child {

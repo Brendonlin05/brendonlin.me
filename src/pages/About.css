@@ -81,8 +81,8 @@
 @media (max-width: 768px) {
   .about-body {
     flex-direction: column;
-    gap: 32px;
-    padding: 40px var(--px-mobile) 60px;
+    gap: 20px;
+    padding: 16px var(--px-mobile) 40px;
   }
 
   .about-headline {

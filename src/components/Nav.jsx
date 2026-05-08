@@ -29,7 +29,6 @@ const Nav = () => {
 
   return (
     <nav className={`nav${isProject ? ' nav--project' : ''}`}>
-      <div className="nav-frost" />
       <a href="/" className="nav-logo" onClick={handleLogoClick}>Brendon Lin</a>
       <button
         className={`nav-hamburger${menuOpen ? ' open' : ''}`}

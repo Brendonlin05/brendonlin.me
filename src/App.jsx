@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,12 +28,27 @@ import humanWard        from './pages/projects/content/HumanWard';
 import wolfWolf         from './pages/projects/content/WolfWolf';
 
 function App() {
+  const navRef = useRef(null);
+  const [navH, setNavH] = useState(70);
+  useEffect(() => {
+    const el = document.querySelector('.nav');
+    if (!el) return;
+    const ro = new ResizeObserver(([e]) => setNavH(Math.ceil(e.contentRect.height)));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <ScrollProgressBar thickness={2} color="#989898" />
+      <div style={{
+        position: 'fixed', top: 0, left: 0, right: 0, height: navH,
+        zIndex: 99, pointerEvents: 'none',
+        backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
+      }} />
       <Nav />
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1, minHeight: '100vh', background: '#000', paddingTop: '70px' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1, minHeight: '100vh', background: '#000', paddingTop: navH }}>
         <Routes>
           <Route path="/"            element={<Home />} />
           <Route path="/play"        element={<Play />} />
