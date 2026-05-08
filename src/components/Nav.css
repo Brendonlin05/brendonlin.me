@@ -8,8 +8,6 @@
   grid-template-columns: 2fr 1fr auto;
   align-items: center;
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   padding: 25px 25px;
   box-sizing: border-box;
 }
