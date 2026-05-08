@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background: #000;
+}
+
+img, video {
+  max-width: 100%;
 }
 
 #root {

@@ -144,8 +144,8 @@ const Home = () => {
           </div>
           <div className="hero-sidebar">
             MOST RECENTLY...<br /><br />
-            Design + HCI <a className="hero-sidebar-link" href="https://www.design.cmu.edu/" target="_blank" rel="noopener noreferrer"><span className="hero-sidebar-text">@Carnegie Mellon</span><span className="hero-sidebar-arrow">↗</span></a><br />
-            Designing <a className="hero-sidebar-link" href="https://www.nasa.gov/learning-resources/lunabotics-challenge/" target="_blank" rel="noopener noreferrer"><span className="hero-sidebar-text">@CMU Lunabotics</span><span className="hero-sidebar-arrow">↗</span></a>
+            Design + HCI <a className="hero-sidebar-link" href="https://www.design.cmu.edu/" target="_blank" rel="noopener noreferrer"><span className="hero-sidebar-text">@Carnegie Mellon</span><span className="hero-sidebar-arrow">{'↗︎'}</span></a><br />
+            Designing <a className="hero-sidebar-link" href="https://www.nasa.gov/learning-resources/lunabotics-challenge/" target="_blank" rel="noopener noreferrer"><span className="hero-sidebar-text">@CMU Lunabotics</span><span className="hero-sidebar-arrow">{'↗︎'}</span></a>
           </div>
         </div>
 

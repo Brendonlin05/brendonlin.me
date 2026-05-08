@@ -11,13 +11,13 @@ const Footer = () => (
         </div>
         <div className="footer-social">
           <a href="https://www.linkedin.com/in/brendon-lin-bb0b36376/?skipRedirect=true" target="_blank" rel="noreferrer">
-            LinkedIn <span className="arrow">↗</span>
+            LinkedIn <span className="arrow">{'↗︎'}</span>
           </a>
           <a href="https://www.instagram.com/brendonbrendon_05" target="_blank" rel="noreferrer">
-            Instagram <span className="arrow">↗</span>
+            Instagram <span className="arrow">{'↗︎'}</span>
           </a>
           <a href="https://github.com/Brendonlin05" target="_blank" rel="noreferrer">
-            Github <span className="arrow">↗</span>
+            Github <span className="arrow">{'↗︎'}</span>
           </a>
         </div>
       </div>
@@ -25,7 +25,7 @@ const Footer = () => (
       <div className="footer-right">
         <span className="footer-cta">Get in touch! Let's build something together.</span>
         <a href="mailto:brendonlin17@gmail.com">
-          brendonlin17@gmail.com <span className="arrow">↗</span>
+          brendonlin17@gmail.com <span className="arrow">{'↗︎'}</span>
         </a>
       </div>
 

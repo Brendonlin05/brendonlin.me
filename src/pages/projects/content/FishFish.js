@@ -42,7 +42,7 @@ const fishFish = {
         [
           { text: 'Acrylic sheets were further attached to these soft-material airbags for visual purposes, displaying the vibratory movement.\n\nDetailed project experiments can be viewed ' },
           { text: 'here', href: 'https://drive.google.com/file/d/1ySE7Y8FOeQ1_UyidUt-TWRlNJYZ9erqF/view', underline: true },
-          { text: '↗', href: 'https://drive.google.com/file/d/1ySE7Y8FOeQ1_UyidUt-TWRlNJYZ9erqF/view', green: true },
+          { text: '↗︎', href: 'https://drive.google.com/file/d/1ySE7Y8FOeQ1_UyidUt-TWRlNJYZ9erqF/view', green: true },
           { text: ', including: the interaction flow, the construction of the digital scene, silicone experiments, TPU pneumatic airbags, neck device securing system, pneumatic system, and the communication protocol between Unity and Arduino.' },
         ],
       ],

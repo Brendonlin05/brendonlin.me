@@ -132,7 +132,7 @@ const ProjectPage = ({ project }) => {
         <span className="pp-category">{project.category}</span>
         <h1 className="pp-title">
           {project.url
-            ? <a href={project.url} target="_blank" rel="noreferrer"><span className="pp-title-text">{project.title}</span> <span className="pp-arrow">↗</span></a>
+            ? <a href={project.url} target="_blank" rel="noreferrer"><span className="pp-title-text">{project.title}</span> <span className="pp-arrow">{'↗︎'}</span></a>
             : project.title
           }
         </h1>

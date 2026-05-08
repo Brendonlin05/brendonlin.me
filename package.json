@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build --base=/Personal-web/",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --base=/Personal-web/"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
