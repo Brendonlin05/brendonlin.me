@@ -116,7 +116,7 @@
 /* ── Work section ── */
 .work {
   width: 100%;
-  padding: 100px 30px 100px;
+  padding: 50px 30px 100px;
   display: flex;
   flex-direction: column;
   gap: 25px;

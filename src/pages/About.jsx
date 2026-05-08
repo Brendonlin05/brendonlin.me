@@ -1,9 +1,11 @@
 import './About.css';
 
+const b = (path) => import.meta.env.BASE_URL + path.replace(/^\//, '');
+
 const About = () => (
   <div className="about">
     <div className="about-image">
-      <img src="/About/Frame 2.webp" alt="Brendon Lin" />
+      <img src={b('/About/Frame 2.webp')} alt="Brendon Lin" />
     </div>
 
     <div className="about-body">
