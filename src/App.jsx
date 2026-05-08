@@ -28,7 +28,7 @@ import humanWard        from './pages/projects/content/HumanWard';
 import wolfWolf         from './pages/projects/content/WolfWolf';
 
 function App() {
-  const [navH, setNavH] = useState(70);
+  const [navH, setNavH] = useState(() => window.innerWidth <= 768 ? 62 : 70);
   useEffect(() => {
     const el = document.querySelector('.nav');
     if (!el) return;

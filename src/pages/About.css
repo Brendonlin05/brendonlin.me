@@ -79,6 +79,10 @@
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+  .about {
+    padding-top: 20px;
+  }
+
   .about-body {
     flex-direction: column;
     gap: 20px;

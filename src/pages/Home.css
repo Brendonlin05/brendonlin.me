@@ -203,18 +203,17 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   /* layout */
-  .hero        { padding-top: 100px; gap: 41px; }
+  .hero        { padding-top: 40px; gap: 41px; }
   .hero-top    { flex-direction: column; align-items: flex-start; width: 100%; gap: 0; }
   .hero-spacer { display: none; }
   .work        { padding: 40px var(--px-mobile) 60px; }
-  .work-row    { flex-direction: column; gap: 25px; }
+  .work-row    { flex-direction: column; gap: 25px; align-items: stretch; }
 
   .hero-headline {
     flex: none;
     max-width: 100%;
     width: 100%;
     padding: 0 var(--px-mobile);
-    font-size: 18px;
   }
 
   .hero-sidebar {
@@ -232,8 +231,5 @@
 
   .hero-video-caption { font-size: 12px; }
 
-  /* type */
-  .work-card-category { font-size: 11px; }
-  .work-card-title    { font-size: 18px; }
-  .work-card-desc     { font-size: 13px; }
+  .work-card { width: 100%; }
 }
