@@ -31,6 +31,10 @@ img, video {
 @media (max-width: 768px) {
   :root {
     --px-mobile: 24px;
-    --nav-h: 62px;   /* fallback until JS measures */
+    --nav-h: 62px;
+  }
+
+  .nav-blur-overlay {
+    display: none;
   }
 }

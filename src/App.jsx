@@ -48,7 +48,7 @@ function App() {
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <ScrollProgressBar thickness={2} color="#989898" />
-      <div style={{
+      <div className="nav-blur-overlay" style={{
         position: 'fixed', top: 0, left: 0, right: 0,
         height: navH + (navH <= 60 ? 2 : 10),
         zIndex: 99, pointerEvents: 'none',
