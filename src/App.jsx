@@ -46,12 +46,12 @@ function App() {
       <ScrollToTop />
       <ScrollProgressBar thickness={2} color="#989898" />
       <div style={{
-        position: 'fixed', top: 0, left: 0, right: 0, height: navH + 20,
+        position: 'fixed', top: 0, left: 0, right: 0, height: navH + 15,
         zIndex: 99, pointerEvents: 'none',
-        backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
+        backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
       }} />
       <Nav />
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1, minHeight: '100vh', background: '#000', paddingTop: navH }}>
+      <main className="site-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1, minHeight: '100vh', background: '#000' }}>
         <Routes>
           <Route path="/"            element={<Home />} />
           <Route path="/play"        element={<Play />} />

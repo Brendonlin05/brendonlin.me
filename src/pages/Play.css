@@ -83,7 +83,7 @@
   .play-header {
     padding-left: 0;
     margin-bottom: 12px;
-    gap: 0;
+    gap: 4px;
   }
 
   .play-title {

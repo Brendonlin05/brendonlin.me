@@ -22,9 +22,18 @@ img, video {
   flex-direction: column;
 }
 
+/* ── Static nav offset (avoids jump when in-flow dropdown opens) ── */
+.site-main {
+  padding-top: 70px;
+}
+
 /* ── Mobile spacing ── */
 @media (max-width: 768px) {
   :root {
     --px-mobile: 24px;
+  }
+
+  .site-main {
+    padding-top: 62px;
   }
 }

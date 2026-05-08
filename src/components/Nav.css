@@ -29,7 +29,7 @@
 
 .nav-links a {
   font-family: 'Source Sans 3', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   color: #989898;
   text-decoration: none;
@@ -113,6 +113,7 @@
   .nav {
     grid-template-columns: 1fr auto;
     padding: 20px 20px;
+    align-items: center;
   }
 
   .nav-close {
@@ -121,17 +122,13 @@
 
   .nav-hamburger {
     display: flex;
+    align-self: center;
   }
 
   .nav-links {
     display: none;
-    position: fixed;
-    top: var(--nav-h, 70px);
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.92);
-    padding: 0 20px 16px;
+    grid-column: 1 / -1;
+    padding: 0 0 16px;
   }
 
   .nav-links.open {
@@ -143,7 +140,7 @@
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     color: #989898;
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .nav-links a:last-child {

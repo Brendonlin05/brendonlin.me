@@ -82,7 +82,7 @@
   .about-body {
     flex-direction: column;
     gap: 20px;
-    padding: 16px var(--px-mobile) 40px;
+    padding: 30px var(--px-mobile) 40px;
   }
 
   .about-headline {
