@@ -94,7 +94,15 @@ const Home = () => {
 
   useEffect(() => {
     const srcs = projects.flat().map(p => p.hoverImg).filter(Boolean);
-    preloadRef.current = srcs.map(src => { const i = new Image(); i.src = b(src); return i; });
+    const links = srcs.map(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = b(src);
+      document.head.appendChild(link);
+      return link;
+    });
+    return () => links.forEach(l => l.parentNode?.removeChild(l));
   }, []);
 
   useEffect(() => {
