@@ -33,7 +33,7 @@ function App() {
       <ScrollToTop />
       <ScrollProgressBar thickness={2} color="#989898" />
       <Nav />
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1, minHeight: '100vh', background: '#000' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1, minHeight: '100vh', background: '#000', paddingTop: '70px' }}>
         <Routes>
           <Route path="/"            element={<Home />} />
           <Route path="/play"        element={<Play />} />
