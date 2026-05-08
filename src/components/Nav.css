@@ -8,7 +8,7 @@
   grid-template-columns: 2fr 1fr auto;
   align-items: center;
   background: transparent;
-  padding: max(15px, env(safe-area-inset-top, 15px)) 25px 15px;
+  padding: max(15px, env(safe-area-inset-top, 15px)) 20px 20px;
   box-sizing: border-box;
 }
 
@@ -112,8 +112,8 @@
 @media (max-width: 768px) {
   .nav {
     grid-template-columns: 1fr auto;
-    padding: max(12px, env(safe-area-inset-top, 12px)) 20px 12px;
-    align-items: center;
+    padding: max(17px, env(safe-area-inset-top, 17px)) 15px 15px;
+    align-items: start;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
