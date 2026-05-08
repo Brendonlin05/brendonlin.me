@@ -1,0 +1,262 @@
+/* ── Type tokens (shared across all project pages) ── */
+.pp {
+  --pp-gray:    #989898;
+  --pp-white:   #fff;
+  --pp-green:   #84A666;
+
+  --pp-fs-category:    14px;
+  --pp-fs-title:       28px;
+  --pp-fs-intro:       14px;
+  --pp-fs-meta-label:  12px;
+  --pp-fs-meta-value:  14px;
+  --pp-fs-label:       14px;
+  --pp-fs-body:        14px;
+}
+
+/* ── Page ── */
+.pp {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #000 0%, #111111 100%);
+}
+
+/* ── Hero ── */
+.pp-hero img,
+.pp-hero video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.pp-hero--natural img,
+.pp-hero--natural video {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* ── Two-column content layout ── */
+.pp-content {
+  display: flex;
+  padding: 25px 25px 100px 25px;
+  gap: 50px;
+}
+
+/* ── Left sidebar ── */
+.pp-sidebar {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 108px;
+  align-self: flex-start;
+}
+
+.pp-category {
+  color: var(--pp-gray);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--pp-fs-category);
+  font-weight: 500;
+}
+
+.pp-title {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  font-size: var(--pp-fs-title);
+  font-weight: 700;
+  color: var(--pp-white);
+  line-height: 1.2;
+}
+
+.pp-title a {
+  color: var(--pp-white);
+  text-decoration: none;
+}
+
+.pp-title-text {
+  text-decoration: underline;
+  text-decoration-color: var(--pp-gray);
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 769px) {
+  .pp-title a:hover {
+    color: var(--pp-green);
+  }
+  .pp-title a:hover .pp-title-text {
+    text-decoration-color: var(--pp-green);
+  }
+}
+
+.pp-arrow {
+  color: var(--pp-green);
+  text-decoration: none;
+  display: inline;
+}
+
+/* ── Right body ── */
+.pp-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Intro ── */
+.pp-intro {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.pp-intro p {
+  flex: 1;
+  margin: 0;
+  color: var(--pp-gray);
+  font-family: 'Syne', sans-serif;
+  font-size: var(--pp-fs-intro);
+  font-weight: 700;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ── Meta ── */
+.pp-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px 0;
+  padding-bottom: 30px;
+}
+
+.pp-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pp-meta-label {
+  color: var(--pp-gray);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--pp-fs-meta-label);
+  font-weight: 400;
+}
+
+.pp-meta-value {
+  color: var(--pp-white);
+  font-family: 'Syne', sans-serif;
+  font-size: var(--pp-fs-meta-value);
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+/* ── Body blocks ── */
+
+/* Full-width image or video */
+.pp-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* All-caps gray caption */
+.pp-label {
+  margin: 0;
+  color: var(--pp-gray);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--pp-fs-label);
+  font-weight: 500;
+}
+
+.pp-label-row {
+  display: flex;
+  gap: 6px;
+}
+
+.pp-label-row .pp-label {
+  flex: 1;
+}
+
+/* Text block — 1 or 2 columns */
+.pp-text {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.pp-text p {
+  flex: 1;
+  margin: 0;
+  color: var(--pp-white);
+  font-family: 'Syne', sans-serif;
+  font-size: var(--pp-fs-body);
+  font-weight: 700;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Inline links inside richtext blocks */
+.pp-link {
+  color: var(--pp-white);
+  text-decoration: underline;
+  text-decoration-color: var(--pp-gray);
+  text-underline-offset: 3px;
+}
+
+.pp-link-green {
+  color: var(--pp-green);
+  text-decoration: none;
+}
+
+/* Side-by-side images row */
+.pp-row {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.pp-row img,
+.pp-row video {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  height: auto;
+  display: block;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .pp-content {
+    flex-direction: column;
+    padding: 5px var(--px-mobile) 30px;
+    gap: 5px;
+  }
+
+  .pp-sidebar {
+    position: static;
+    width: 100%;
+    padding-top: 20px;
+    gap: 12px;
+  }
+
+  .pp-title {
+    padding-bottom: 14px;
+  }
+
+  .pp-intro {
+    flex-direction: column;
+  }
+
+  .pp-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pp-text {
+    flex-direction: column;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}

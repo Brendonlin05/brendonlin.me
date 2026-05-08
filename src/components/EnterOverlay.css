@@ -1,0 +1,33 @@
+.enter-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.enter-label {
+  color: #989898;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.enter-overlay:hover .enter-label {
+  color: #fff;
+}
+
+.enter-overlay--out {
+  animation: enter-fade-out 0.4s ease forwards;
+}
+
+@keyframes enter-fade-out {
+  to { opacity: 0; }
+}
