@@ -133,10 +133,10 @@
     right: 0;
     flex-direction: column;
     gap: 0;
-    background: rgba(0, 0, 0, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 8px 20px 20px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 0 20px 16px;
   }
 
   .nav-links.open {
@@ -144,6 +144,8 @@
   }
 
   .nav-links a {
+    display: block;
+    width: 100%;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     color: #989898;

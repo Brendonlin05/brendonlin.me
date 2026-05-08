@@ -77,15 +77,29 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .play {
-    padding: 50px var(--px-mobile) 60px;
+    padding: 50px 5px 60px;
+  }
+
+  .play-header {
+    padding-left: 0;
+    margin-bottom: 20px;
+    gap: 0;
+  }
+
+  .play-title {
+    font-size: 16px;
+  }
+
+  .play-subtitle {
+    font-size: 10px;
   }
 
   .play-grid {
-    gap: 8px;
+    gap: 5px;
   }
 
   .play-col {
-    gap: 8px;
+    gap: 5px;
   }
 
   .play-item-caption {
@@ -94,7 +108,7 @@
   }
 
   .play-item-caption span {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   .play-item-caption span:last-child {

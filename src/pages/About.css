@@ -86,6 +86,15 @@
   }
 
   .about-headline {
-    font-size: 26px;
+    font-size: 16px;
+  }
+
+  .about-sidebar-label {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .about-list li {
+    font-size: 12px;
   }
 }
