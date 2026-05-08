@@ -46,7 +46,8 @@ function App() {
       <ScrollToTop />
       <ScrollProgressBar thickness={2} color="#989898" />
       <div style={{
-        position: 'fixed', top: 0, left: 0, right: 0, height: navH + 15,
+        position: 'fixed', top: 0, left: 0, right: 0,
+        height: navH + (navH <= 65 ? 5 : 15),
         zIndex: 99, pointerEvents: 'none',
         backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
       }} />

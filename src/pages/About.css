@@ -80,13 +80,13 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .about {
-    padding-top: 20px;
+    padding-top: 40px;
   }
 
   .about-body {
     flex-direction: column;
     gap: 20px;
-    padding: 30px var(--px-mobile) 40px;
+    padding: 14px var(--px-mobile) 40px;
   }
 
   .about-headline {

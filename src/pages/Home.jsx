@@ -4,8 +4,6 @@ import './Home.css';
 
 const b = (path) => path ? import.meta.env.BASE_URL + path.replace(/^\//, '') : path;
 
-let showreelMuted = true;
-
 const projects = [
   [
     {
@@ -87,7 +85,9 @@ const projects = [
 const Home = () => {
   const [activeKey, setActiveKey] = useState(null);
   const [loadedImgs, setLoadedImgs] = useState(() => new Set());
+  const [reelStarted, setReelStarted] = useState(false);
   const videoRefs = useRef({});
+  const reelRef = useRef(null);
   const preloadRef = useRef([]);
   const workRef = useRef(null);
   const location = useLocation();
@@ -160,19 +160,26 @@ const Home = () => {
         <div className="hero-video-wrapper">
           <div className="hero-video-container">
             <video
+              ref={reelRef}
               src={b('/home/2025 Show Reel no subtitle.mp4')}
-              controls
-              autoPlay
+              controls={reelStarted}
               loop
-              muted
               playsInline
               preload="metadata"
-              ref={el => {
-                if (!el) return;
-                el.muted = showreelMuted;
-                el.addEventListener('volumechange', () => { showreelMuted = el.muted; });
-              }}
             />
+            {!reelStarted && (
+              <button
+                className="reel-play-btn"
+                onClick={() => { setReelStarted(true); reelRef.current?.play(); }}
+                aria-label="Play showreel with sound"
+              >
+                <span className="reel-play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </span>
+              </button>
+            )}
           </div>
           <div className="hero-video-caption">
             <span>Showreel 2025</span>

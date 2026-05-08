@@ -23,7 +23,7 @@ function VideoBlock({ src, className, sound }) {
     <video
       ref={ref}
       className={className}
-      src={b(src)}
+      src={src}
       loop
       playsInline
       preload="metadata"
