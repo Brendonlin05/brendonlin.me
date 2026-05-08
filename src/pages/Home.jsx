@@ -159,8 +159,10 @@ const Home = () => {
           <div className="hero-video-container">
             <video
               src={b('/home/2025 Show Reel no subtitle.mp4')}
-              controls
+              autoPlay
+              muted
               loop
+              controls
               playsInline
               preload="metadata"
             />
