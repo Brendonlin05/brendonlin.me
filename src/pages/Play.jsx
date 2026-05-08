@@ -122,7 +122,7 @@ const Play = () => (
     <div className="play-grid">
       {columns.map((col, ci) => (
         <div className="play-col" key={ci}>
-          {col.map(item => {
+          {col.slice(1).map(item => {
             const cap = captions[item.key] || {};
             return (
               <div className="play-item" key={item.key}>
