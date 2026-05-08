@@ -85,6 +85,7 @@ const projects = [
 const Home = () => {
   const [activeKey, setActiveKey] = useState(null);
   const [loadedImgs, setLoadedImgs] = useState(() => new Set());
+  const [reelMuted, setReelMuted] = useState(true);
   const videoRefs = useRef({});
   const preloadRef = useRef([]);
   const workRef = useRef(null);
@@ -162,9 +163,10 @@ const Home = () => {
               autoPlay
               muted
               loop
-              controls
+              controls={reelMuted}
               playsInline
               preload="metadata"
+              onVolumeChange={e => setReelMuted(e.target.muted)}
             />
           </div>
           <div className="hero-video-caption">

@@ -30,6 +30,9 @@ import wolfWolf         from './pages/projects/content/WolfWolf';
 function App() {
   const [navH, setNavH] = useState(() => window.innerWidth <= 768 ? 62 : 70);
   useEffect(() => {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  }, []);
+  useEffect(() => {
     const el = document.querySelector('.nav');
     if (!el) return;
     const ro = new ResizeObserver(([e]) => {
@@ -47,7 +50,7 @@ function App() {
       <ScrollProgressBar thickness={2} color="#989898" />
       <div style={{
         position: 'fixed', top: 0, left: 0, right: 0,
-        height: navH + (navH <= 65 ? 5 : 15),
+        height: navH + (navH <= 60 ? 2 : 10),
         zIndex: 99, pointerEvents: 'none',
         backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
       }} />

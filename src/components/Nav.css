@@ -10,6 +10,8 @@
   background: transparent;
   padding: max(25px, env(safe-area-inset-top, 25px)) 25px 25px;
   box-sizing: border-box;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .nav-logo {
