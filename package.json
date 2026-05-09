@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Personal-web/",
+    "build": "vite build --base=/brendonlin.me/",
     "lint": "eslint .",
-    "preview": "vite preview --base=/Personal-web/"
+    "preview": "vite preview --base=/brendonlin.me/"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
