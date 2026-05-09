@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Home.css';
 
@@ -83,7 +83,6 @@ const projects = [
 ];
 
 const Home = () => {
-  const [reelMuted, setReelMuted] = useState(true);
   const videoRefs = useRef({});
   const preloadRef = useRef([]);
   const workRef = useRef(null);
@@ -159,10 +158,9 @@ const Home = () => {
               autoPlay
               muted
               loop
-              controls={reelMuted}
+              controls
               playsInline
               preload="metadata"
-              onVolumeChange={e => setReelMuted(e.target.muted)}
             />
           </div>
           <div className="hero-video-caption">
