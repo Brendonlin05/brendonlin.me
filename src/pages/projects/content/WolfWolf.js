@@ -33,7 +33,6 @@ const wolfWolf = {
     },
     { type: 'row', items: [{ src: '/Wolf/5 1.webp' }, { src: '/Wolf/5 2.webp' }] },
         { type: 'row', items: [{ src: '/Wolf/6 1.webp' }, { src: '/Wolf/6 2.webp' }] },
-    { type: 'image', src: '/Wolf/7.webp' },
     { type: 'row', items: [{ src: '/Wolf/7 1.mp4' }, { src: '/Wolf/7 2.mp4' }] },
     { type: 'video', src: '/Wolf/8.mp4' },
     { type: 'video', src: '/Wolf/9.mp4' },
