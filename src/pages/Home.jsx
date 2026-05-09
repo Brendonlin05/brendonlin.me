@@ -83,8 +83,6 @@ const projects = [
 ];
 
 const Home = () => {
-  const [activeKey, setActiveKey] = useState(null);
-  const [loadedImgs, setLoadedImgs] = useState(() => new Set());
   const [reelMuted, setReelMuted] = useState(true);
   const videoRefs = useRef({});
   const preloadRef = useRef([]);
@@ -123,13 +121,11 @@ const Home = () => {
     }
   }, [location.state]);
 
-  const startHover = (key, hasVideo) => {
-    setActiveKey(key);
-    if (hasVideo) videoRefs.current[key]?.play().catch(() => {});
+  const startHover = (key) => {
+    videoRefs.current[key]?.play().catch(() => {});
   };
 
   const stopHover = (key) => {
-    setActiveKey(null);
     const video = videoRefs.current[key];
     if (video) { video.pause(); video.currentTime = 0; }
   };
@@ -183,25 +179,19 @@ const Home = () => {
           <div className="work-row" key={ri}>
             {row.map((p, pi) => {
               const cardKey = `${ri}-${pi}`;
-              const isActive = activeKey === cardKey;
-              const showVideo = isActive && !!p.hoverVideo;
-              const showHoverImg = isActive && !showVideo && !!p.hoverImg && loadedImgs.has(p.hoverImg);
-
               const media = (
                 <div className="work-card-media">
                   <img
                     src={b(p.img)}
                     alt={p.title}
                     decoding="async"
-                    style={(showVideo || showHoverImg) ? { opacity: 0 } : undefined}
                   />
                   {p.hoverImg && (
                     <img
                       src={b(p.hoverImg)}
                       alt={p.title}
                       decoding="async"
-                      onLoad={() => setLoadedImgs(prev => new Set([...prev, p.hoverImg]))}
-                      style={!showHoverImg ? { visibility: 'hidden' } : undefined}
+                      className="work-card-img-hover"
                     />
                   )}
                   {p.hoverVideo && (
@@ -209,7 +199,6 @@ const Home = () => {
                       ref={el => { videoRefs.current[cardKey] = el; }}
                       src={b(p.hoverVideo)}
                       muted loop playsInline preload="metadata"
-                      style={!showVideo ? { opacity: 0 } : undefined}
                     />
                   )}
                 </div>
@@ -217,7 +206,7 @@ const Home = () => {
 
               return p.locked ? (
                 <div className="work-card work-card--locked" key={pi}
-                  onMouseEnter={() => startHover(cardKey, !!p.hoverVideo)}
+                  onMouseEnter={() => startHover(cardKey)}
                   onMouseLeave={() => stopHover(cardKey)}
                 >
                   {media}
@@ -229,7 +218,7 @@ const Home = () => {
                 </div>
               ) : (
                 <Link className="work-card" key={pi} to={`/work/${p.slug}`}
-                  onMouseEnter={() => startHover(cardKey, !!p.hoverVideo)}
+                  onMouseEnter={() => startHover(cardKey)}
                   onMouseLeave={() => stopHover(cardKey)}
                 >
                   {media}

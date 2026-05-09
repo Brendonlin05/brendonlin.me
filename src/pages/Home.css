@@ -168,6 +168,22 @@
   object-fit: cover;
   display: block;
   transition: opacity 0.15s ease;
+  will-change: opacity;
+}
+
+.work-card-media .work-card-img-hover,
+.work-card-media video {
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  .work-card:not(.work-card--locked):hover .work-card-img-hover,
+  .work-card:not(.work-card--locked):hover video {
+    opacity: 1;
+  }
+  .work-card:not(.work-card--locked):hover img:not(.work-card-img-hover) {
+    opacity: 0;
+  }
 }
 
 .work-card-info {
