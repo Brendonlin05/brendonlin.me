@@ -4,7 +4,6 @@ const animationChallenge = {
   title: '30-Day Animation Challenge',
   url: '',
   heroVideo: '/Animation challenge/header video.mp4',
-  lockMuted: true,
   intro: [
     'During the Fall Semester of 2025, my friend and I challenged ourselves to a 30 Day Daily Animation Challenge.',
     '',

@@ -102,13 +102,13 @@ const ProjectPage = ({ project }) => {
 
   useEffect(() => {
     const video = heroVideoRef.current;
-    if (!video) return;
+    if (!video || project.lockMuted) return;
     const obs = new IntersectionObserver(([entry]) => {
       video.muted = !entry.isIntersecting;
     }, { threshold: 0.1 });
     obs.observe(video);
     return () => obs.disconnect();
-  }, []);
+  }, [project.lockMuted]);
 
   return (
   <div className="pp">
